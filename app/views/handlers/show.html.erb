@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @handler.name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @handler.country %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @handler.number %>
+</p>
+
+<%= link_to 'Edit', edit_handler_path(@handler) %> |
+<%= link_to 'Back', handlers_path %>

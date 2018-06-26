@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  handler: one
+  dog: one
+
+two:
+  handler: two
+  dog: two

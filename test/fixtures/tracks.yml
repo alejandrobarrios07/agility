@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  truck_mode: MyString
+  judge: MyString
+  time: 
+  speed: 
+
+two:
+  truck_mode: MyString
+  judge: MyString
+  time: 
+  speed: 

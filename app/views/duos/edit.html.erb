@@ -1,0 +1,29 @@
+<h1>Editing Duo</h1>
+    <% @dogs = Dog.all %>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Breed</th>
+      <th>Number</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= dog.id %></td>
+        <td><%= dog.name %></td>
+        <td><%= dog.breed %></td>
+        <td><%= dog.number %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= render 'form', duo: @duo %>
+
+<%= link_to 'Show', @duo %> |
+<%= link_to 'Back', duos_path %>

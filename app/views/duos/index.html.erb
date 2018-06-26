@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Duos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Handler</th>
+      <th>Dog</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @duos = Duo.all %>
+    <% @duos.each do |duo| %>
+      <tr>
+        <td><%= duo.handler.name.to_s %></td>
+        <td><%= duo.dog.name.to_s %></td>
+        <td><%= link_to 'Show', duo %></td>
+        <td><%= link_to 'Edit', edit_duo_path(duo) %></td>
+        <td><%= link_to 'Destroy', duo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Duo', new_duo_path %>
+<%= link_to "Home", root_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Handler:</strong>
+  <%= @duo.handler.name.to_s %>
+</p>
+
+<p>
+  <strong>Dog:</strong>
+  <%= @duo.dog.name.to_s %>
+</p>
+
+<%= link_to 'Edit', edit_duo_path(@duo) %> |
+<%= link_to 'Back', duos_path %>

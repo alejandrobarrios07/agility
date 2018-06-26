@@ -6,6 +6,8 @@ services:
     command: bundle exec rails s -p 3000 -b 0.0.0.0
     ports:
       - 3000:3000
+    volumes_from:
+      - bundle
     volumes:
       - .:/var/www/
   db:
@@ -15,3 +17,7 @@ services:
     environment:
       POSTGRES_USER: pgadmin
       POSTGRES_PASSWORD: 123456789
+  bundle:
+    image: busybox
+    volumes:
+      - /bundle

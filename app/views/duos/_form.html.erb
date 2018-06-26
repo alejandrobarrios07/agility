@@ -1,0 +1,27 @@
+<%= form_with(model: duo, local: true) do |form| %>
+  <% if duo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(duo.errors.count, "error") %> prohibited this duo from being saved:</h2>
+
+      <ul>
+      <% duo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :handler_id %>
+    <%= form.text_field :handler_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dog_id %>
+    <%= form.text_field :dog_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
